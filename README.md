@@ -40,6 +40,8 @@ Ramos Cerna Alejandra Gianella
         #TEMPERATURA MEDIA
         tmedia <- (data_long_lat_tmax+data_long_lat_tmin)/2
         write.csv(tmedia, "FINAL/DATA PISCO/tmedia.csv", quote = F)
+        
+        
         install.packages(c("tidyverse", "ggplot2", "dplyr"))
         install.packages(c("tidyverse", "ggplot2", "dplyr"))
         library(tidyverse)
@@ -78,6 +80,11 @@ Ramos Cerna Alejandra Gianella
         View(tmedia_pisco)
         write.csv(tmedia_pisco, "FINAL/DATA EN CSV/PP ESTACIONES/tmedia.csv")
         colnames(tmedia_pisco)
+        
+        
+        
+        
+        
         pisac <- plot(Pp_pisco$fecha,Pp_pisco$PISAC, type = "l", col= 'blue',
                       main= 'Serie de Tiempo de la estación pisac', xlab= 'Años',
                       ylab= 'Precipitación')
@@ -111,6 +118,9 @@ Ramos Cerna Alejandra Gianella
         Caycay <- plot(Pp_pisco$fecha,Pp_pisco$CAICAY, type = "l", col= 'blue',
                        main= 'Serie de Tiempo de la estación Caicay', xlab= 'Años',
                        ylab= 'Precipitación')
+                       
+                       
+                       
         ########################################
         #########graficas avanzadas###########
         ########################################
