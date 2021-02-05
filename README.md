@@ -20,7 +20,6 @@ Ramos Cerna Alejandra Gianella
     raster::projection(long_lat) <- raster::projection(raster_tmax)
     raster::projection(long_lat) <- raster::projection(raster_tmin)
 
-![Rplot](https://user-images.githubusercontent.com/78572913/107041783-e7fbfc00-678e-11eb-8c91-02ac8af39e89.png)
 
         # PRECIPITACION
         points_long_lat_pp <- raster::extract(raster_pp[[1]], long_lat, cellnumbers = T)[,1]
@@ -78,9 +77,12 @@ Ramos Cerna Alejandra Gianella
         View(tmedia_pisco)
         write.csv(tmedia_pisco, "FINAL/DATA EN CSV/PP ESTACIONES/tmedia.csv")
         colnames(tmedia_pisco)
+Ahora presentaremos los graficos de serie de tiempo en Pisac 
+
         pisac <- plot(Pp_pisco$fecha,Pp_pisco$PISAC, type = "l", col= 'blue',
                       main= 'Serie de Tiempo de la estación pisac', xlab= 'Años',
                       ylab= 'Precipitación')
+![Rplot](https://user-images.githubusercontent.com/78572913/107041783-e7fbfc00-678e-11eb-8c91-02ac8af39e89.png)
         Paruro <- plot(Pp_pisco$fecha, Pp_pisco$PARURO, type = "l", col= 'blue',
                        main= 'Serie de Tiempo de la estación Paruro', xlab= 'Años',
                        ylab= 'Precipitación')
@@ -96,21 +98,7 @@ Ramos Cerna Alejandra Gianella
         caycay <- plot(Pp_pisco$fecha,Pp_pisco$CAICAY, type = "l", col= 'blue',
                        main= 'Serie de Tiempo de la estación Caicay', xlab= 'Años',
                        ylab= 'Precipitación')
-        Pisac <- plot(Pp_pisco$fecha,Pp_pisco$PISAC, type = "l", col= 'blue',
-                      main= 'Serie de Tiempo de la estación pisac', xlab= 'Años',
-                      ylab= 'Precipitación')
-        Paruro <- plot(Pp_pisco$fecha, Pp_pisco$PARURO, type = "l", col= 'blue',
-                       main= 'Serie de Tiempo de la estación Paruro', xlab= 'Años',
-                       ylab= 'Precipitación')
-        Colquepata <- plot(Pp_pisco$fecha,Pp_pisco$COLQUEPATA, type = "l", col= 'blue',
-                           main= 'Serie de Tiempo de la estación Colquepata', xlab= 'Años',
-                           ylab= 'Precipitación')
-        Catca <-  plot(Pp_pisco$fecha,Pp_pisco$CCATCCA, type = "l", col= 'blue',
-                       main= 'Serie de Tiempo de la estación Ccatcca', xlab= 'Años',
-                       ylab= 'Precipitación')
-        Caycay <- plot(Pp_pisco$fecha,Pp_pisco$CAICAY, type = "l", col= 'blue',
-                       main= 'Serie de Tiempo de la estación Caicay', xlab= 'Años',
-                       ylab= 'Precipitación')
+        
         ########################################
         #########graficas avanzadas###########
         ########################################
